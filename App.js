@@ -4,16 +4,34 @@ import { StyleSheet, Text, View } from 'react-native';
 import Botao from './componetes/Botao';
 import Display from './componetes/Display';
 
+const initialState ={
+  displayValue:'0',
+  clearDisplay:false,
+  operation:null,
+  values:[0,0],
+  current:0
+}
+
 export default class App extends Component{
 
 
 
   state = {
-    displayValue:'0'
+    // displayValue:'0'
+    // nao era mais necessário pois a constante initial state já faz isso
+    ...initialState
   }
 
   addDigit = n =>{
-    this.setState({displayValue: n})
+    // this.setState({displayValue: n})
+
+    const clearDisplay = this.state.displayValue ==='0' || this.state.clearDisplay 
+    if(n==='.'&& !clearDisplay && this.state.displayValue.includes('.')){
+      return
+    }
+
+    
+
   }
 
   clearMemory = () =>{
