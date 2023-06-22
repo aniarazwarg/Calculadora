@@ -1,10 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { Component } from 'react';
-// import Botao from './componetes/Botao';
-// import Display from './componetes/Display';
-import Botao from '../componetes/Botao';
-import Display from '../componetes/Display';
+import Botao from './componetes/Botao';
+import Display from './componetes/Display';
+// import Botao from '../componetes/Botao';
+// import Display from '../componetes/Display';
+
 
 const initialState = {
   displayValue:'0',
